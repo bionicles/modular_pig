@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    *{text-align: center;}
+  </style>
+  <body>
+    <div class="wrapper">
+      <a href="http://localhost:8000/pigs/new">Create a new pig!</a>
+      <br>
+      <% for (x in pigs) { %>
+        <br>
+        <span>Name: </span> <span> <%= pigs[x].name %> </span>
+        <form action="pigs/edit/<%= pigs[x]._id %>" method="get">
+          <input type="submit" name="submit" value="Edit Pig">
+        </form>
+        <form action="pigs/destroy/<%= pigs[x]._id %>" method="post">
+          <input type="submit" name="submit" value="Delete Pig">
+        </form>
+      <% } %>
+    </div>
+  </body>
+</html>

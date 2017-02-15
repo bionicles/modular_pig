@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= pig.name %></title>
+  </head>
+  <style media="screen">
+    *{text-align: center;}
+  </style>
+  <body>
+    <span>Name: </span> <span> <%= pig.name %> </span>
+    <form class="" action="/pigs/id" method="post">
+      <p>ID: <%= pig._id %></p>
+      <input type="hidden" name="id" value="<%= pig._id %>">
+      <label>Pig's New Name: </label><input type="text" name="name">
+      <input type="submit" name="submit" value="edit this pig">
+    </form>
+  </body>
+</html>

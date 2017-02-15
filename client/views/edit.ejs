@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>edit <%= pig.name %></title>
+  </head>
+  <style media="screen">
+    *{text-align: center;}
+  </style>
+  <body>
+    <span>Pig Name: </span> <span><%= pig.name %></span>
+
+    <form action="/pigs/id" method="post">
+      <label>Change Pig Name:</label><input type="text" name="name">
+      <input type="hidden" name="id" value="<%= pig._id %>">
+      <input type="submit" name="submit" value="Change Some Pig!">
+    </form>
+
+  </body>
+</html>
